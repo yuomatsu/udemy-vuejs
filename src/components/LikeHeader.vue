@@ -1,3 +1,3 @@
 <template>
-  <h1>いいね</h1>
+  <h1>ブログ</h1>
 </template>
