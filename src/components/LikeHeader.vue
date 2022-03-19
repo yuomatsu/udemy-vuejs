@@ -1,3 +1,12 @@
 <template>
-  <h1>ブログ</h1>
+  <div>
+    <slot name="title"></slot>
+    <slot name="number"></slot>
+  </div>
 </template>
+
+<script>
+export default {
+  props: ["headerText"]
+};
+</script>
