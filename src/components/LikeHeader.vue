@@ -6,6 +6,17 @@
 
 <script>
 export default {
-  props: ["headerText"]
+  data() {
+    return {
+      user: {
+        firstName: "Jack",
+        lastName: "Donald"
+      }
+    };
+  }
 };
 </script>
+
+<style scoped>
+
+</style>
