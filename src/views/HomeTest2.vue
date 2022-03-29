@@ -15,7 +15,14 @@ import { mapGetters } from "vuex";
 // import { mapMutations } from "vuex";
 export default {
   computed: {
-    ...mapGetters(["doubleCount", "tripleCount"]),
+    ...mapGetters("count", ["doubleCount", "tripleCount"]),
+		// mapGettersを利用しない場合
+		// doubleCount() {
+		// 	return this.$store.getters["count/doubleCount"];
+		// },
+		// tripleCount() {
+		// 	return this.$store.getters["count/tripleCount"];
+		// },
 		message: {
 			get() {
 				return this.$store.getters.message;
@@ -27,7 +34,7 @@ export default {
   },
   methods: {
     // ...mapMutations(["increment"]),
-		...mapActions(["increment"])
+		...mapActions("count", ["increment"])
   },
 
 };
