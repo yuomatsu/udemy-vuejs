@@ -5,6 +5,9 @@ import store from "./store/index"
 
 
 Vue.config.productionTip = false
+Vue.filter("upperCase", function (value) {
+  return value.toUpperCase()
+});
 
 new Vue({
   router,
