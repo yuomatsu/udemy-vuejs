@@ -1,4 +1,4 @@
-export const tolyoNumber = {
+export const tokyoNumber = {
   data() {
     return {
       title: "Welcome To Tokyo",

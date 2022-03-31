@@ -15,16 +15,19 @@
 </template>
 
 <script>
+import CountNumber from "./CountNumber.vue";
 import { mapActions } from "vuex";
 import { mapGetters } from "vuex";
 // import { mapMutations } from "vuex";
 
 
-import CountNumber from "./CountNumber.vue";
 import { tokyoNumber } from "@/tokyoNumber";
 
 export default {
 	mixins: [tokyoNumber],
+	components: {
+		CountNumber
+	},
   computed: {
     ...mapGetters("count", ["doubleCount", "tripleCount"]),
     // mapGettersを利用しない場合
@@ -42,9 +45,6 @@ export default {
         this.$store.dispatch("updateMessage", value);
       },
     },
-  },
-  components: {
-    CountNumber
   },
   methods: {
     // ...mapMutations(["increment"]),
